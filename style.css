@@ -1,0 +1,71 @@
+// @import url('https://fonts.googleapis.com/css?family=Changa:400,500,700');
+
+$brown: #8C6429;  
+$medBlue: #55C3DC;  
+$lightBlue: #E7F3EF;
+$orange: #E24B2C;
+$gray: #73726D;
+
+$box-shadow: 10px 11px 20px 0px rgba(51,34,17,0.65);
+$webkit-box-shadow: 10px 11px 20px 0px rgba(51,34,17,0.65);
+$moz-box-shadow: 10px 11px 20px 0px rgba(51,34,17,0.65);
+$btn-box-shadow: 3px 3px 4px 0px rgba(51,34,17,0.65);
+$scrn-box-shadow: inset -1px -1px 1px 0px rgba(51,34,17,0.65);
+
+body {
+	background: $brown;
+	margin: 10rem 0;
+	}
+
+#calculator-body {
+	background: $medBlue;
+	border-radius: 6px;
+	margin: 0 auto;
+	padding-bottom: 3rem;
+	min-height: 40rem;
+	width: 40rem;
+	box-shadow: $box-shadow;
+	moz-box-shadow: $moz-box-shadow;
+	webkit-box-shadow: $webkit-box-shadow;
+	
+	h1 {
+		text-align: center;
+		padding: 1rem 0;
+	}
+}
+
+#calculator-screen {
+		background: $lightBlue;
+		outline: $gray 2px solid;
+		margin: 1rem;
+		padding-right: 1rem;
+		min-height: 5rem;
+		box-shadow: $scrn-box-shadow;
+		moz-box-shadow: $scrn-box-shadow;
+		webkit-box-shadow: $scrn-box-shadow;
+		#entry, #history p {
+			text-align: right;
+		}
+		#answer {
+			font-size: 3rem;
+		}
+	}
+
+#calculator-buttons {
+	font-size: 3rem;
+	margin: auto 6.5rem;
+	.clearBtn {
+
+	}
+	
+	button {
+		outline: $gray 1px solid;
+		margin: 1rem;
+		height: 4rem;
+		width: 4rem;
+		text-align: center;
+		box-shadow: $btn-box-shadow;
+		moz-box-shadow: $btn-box-shadow;
+		webkit-box-shadow: $btn-box-shadow;
+	}
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Changa:400,500,700" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom Styles -->
+	<link href="style.css" rel="stylesheet">
+	<!-- Font Awesome CDN -->
+	<script src="https://use.fontawesome.com/b7dc2830a9.js"></script>
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+	<!-- Custom JS -->
+	<script src="app.js" type="text/javascript"></script>
+
+
+</head>
+
+	<body>
+		<main id="calculator-body">
+			<h1>Calculator</h1>
+			
+			<!-- Entry window with last # entered -->
+			<section id="calculator-screen">
+				<div id="entry">
+					<p id="answer">0</p>
+				</div>
+				<div id="history">
+					<p>0</p>
+				</div>
+			</section>
+			
+			<!-- number buttons -->
+			<section id="calculator-buttons" class="calcBtns">
+				<button value="c" id="clearBtn">C</button>
+				<div class="btnrow">
+				<button value="7">7</button>
+				<button value="8">8</button>
+				<button value="9">9</button>
+				<button value="+" id="plusBtn">+</button>
+				</div>
+				
+				<div class="btnrow">
+				<button value="4">4</button>
+				<button value="5">5</button>
+				<button value="6">6</button>
+				<button value="-" id="minusBtn">-</button>
+				</div>
+				
+				<div class="btnrow">
+				<button value="1">1</button>
+				<button value="2">2</button>
+				<button value="3">3</button>
+				<button value="*" id="multBtn">x</button>
+				</div>
+				
+				<div class="btnrow">
+				<button value="0">0</button>
+				<button value=".">.</button>
+				<button value="=" id="equalBtn">=</button>
+				<button value="/" id="divideBtn">&divide;</button>
+				</div>
+					
+				
+			</section>
+		
+		
+		
+		</main>
+		<footer></footer>
+	</body>
+</html>
