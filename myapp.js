@@ -15,6 +15,7 @@
 
 $(document).ready(function(){
 
+	var number = "";
     var newnumber = "";
     var operator = "";
     // var equals = $("#equalBtn").eval();
@@ -33,6 +34,7 @@ $(document).ready(function(){
 	};
 		
 	var input = "";
+	var answer = "";
 
 	// get value of button when clicked
 	$("button").click(function() {
@@ -46,20 +48,29 @@ $(document).ready(function(){
 			// update input to previous input (input - 1)
 			input = input.slice(0, -1); 
 
-		} else {
-			//get value of button clicked and store in variable
+		} else if (number != "=") {
 			input = input + $(this).val();
+		} else (number === "=") {
+			var parser = math.parser();
+			answer = parser.eval(input);
 		}
 		
 		//display button value in calculator window
 		if (input === "") {
 			$("#answer").html("0");
-		} else {
+		} else if (number != "=") {
 			$("#answer").html(input); 
+		} else {
+			$("#answer").html(answer);
 		}
 
 		console.log(input);
 	});
+
+
+
+	// switch statement for operators
+	// set two variables - one for current number entered, one for second number entered??
 
 	// use something like this: eval("2 * 5 + 10");
 
