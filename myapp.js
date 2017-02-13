@@ -14,27 +14,9 @@
 
 
 $(document).ready(function(){
-
-	var number = "";
-    var newnumber = "";
-    var operator = "";
-    // var equals = $("#equalBtn").eval();
-    var totaldiv = $("#answer");
-    totaldiv.text("0");
-
-// make sure numbers & answer fit in screen
-	var testNumLength = function(number) {
-        if (number.length > 9) {
-            totaldiv.text(number.substr(number.length-9,9));
-            if (number.length > 15) {
-                number = "";
-                totaldiv.text("Err");
-            }
-        } 
-	};
 		
 	var input = "";
-	var answer = "";
+	var answer = null;
 
 	// get value of button when clicked
 	$("button").click(function() {
@@ -44,18 +26,26 @@ $(document).ready(function(){
 		
 		if (number === "AC") {
 			input = "";
+			answer = null;
+		} else if ((number === "*" || number === "/") && input === "") {
+			 alert("Click a number.");
 		} else if (number === "D") {
 			// update input to previous input (input - 1)
 			input = input.slice(0, -1); 
-
-		} else if (number != "=") {
-			input = input + $(this).val();
-		} else (number === "=") {
+		} else if (number === "=") {
 			var parser = math.parser();
 			answer = parser.eval(input);
+		} else if (answer != null && (number === "+" || number === "-" || number === "*" || number === "/")){
+			input = answer.toString() + number;
+			answer = null;
+		} else if (answer != null) { //number is a number 0-9
+			input = number;
+			answer = null;	
+		} else  { 
+			input = input + number;
 		}
 		
-		//display button value in calculator window
+		//display button value in calculator window - HTML only
 		if (input === "") {
 			$("#answer").html("0");
 		} else if (number != "=") {
@@ -64,7 +54,6 @@ $(document).ready(function(){
 			$("#answer").html(answer);
 		}
 
-		console.log(input);
 	});
 
 
