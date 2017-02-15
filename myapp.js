@@ -56,15 +56,4 @@ $(document).ready(function(){
 
 	});
 
-
-
-	// switch statement for operators
-	// set two variables - one for current number entered, one for second number entered??
-
-	// use something like this: eval("2 * 5 + 10");
-
-	// use operators to do math procedure 
-	//return answer after = is clicked
-
-
 }); // FIN
